@@ -121,3 +121,54 @@ Additional Tips
 - Removing Tracked Files: If you accidentally tracked files that should be ignored, remove them from the repository and commit that change before adding the paths to `.gitignore`. Use `git rm --cached <file>` to untrack files without deleting them from your local filesystem.
 
 By following these steps, you can effectively prevent datasets or any unwanted files from being uploaded to GitHub, ensuring your repository remains clean and only contains necessary files.
+
+# GUIDE TO CONTRIBUTOR FOR FORK, CLONE AND PULL
+
+To fork, clone, and pull modifications from an existing GitHub project, follow these essential steps:
+
+# 1. Fork the Project
+- Navigate to the GitHub page of the project you want to contribute to.
+- Click the "Fork" button in the top-right corner of the page. This creates a copy of the project's repository in your GitHub account.
+
+# 2. Clone the Forked Repository
+- Open your forked repository on GitHub.
+- Click the "Code" button and copy the URL for the repository.
+- Open a terminal on your computer.
+- Execute the clone command with the copied URL:
+  ```sh
+  git clone https://github.com/your_username/project_name.git
+  ```
+  Replace `https://github.com/your_username/project_name.git` with the URL you copied.
+
+# 3. Configure a Remote for the Upstream Repository
+After cloning the forked repository, you'll want to keep it synchronized with the original project. To do this, you need to configure a new remote:
+- Navigate into the cloned repository's directory:
+  ```sh
+  cd project_name
+  ```
+- **Add** the original repository as a remote (often called "upstream"):
+  ```sh
+  git remote add upstream https://github.com/original_owner/project_name.git
+  ```
+  Replace `https://github.com/original_owner/project_name.git` with the original repository's URL.
+
+# 4. Pull Modifications from the Upstream Repository
+To update your fork with changes from the original project:
+- **Fetch** the latest changes from the upstream repository:
+  ```sh
+  git fetch upstream
+  ```
+- **Switch** to your local `main` branch (or `master` if the project uses `master` as the default branch):
+  ```sh
+  git checkout main
+  ```
+- **Merge** the changes from the upstream's default branch (usually `main` or `master`) into your local default branch:
+  ```sh
+  git merge upstream/main
+  ```
+- **Push** the updates to your fork on GitHub (optional, if you want your GitHub fork to reflect the latest changes):
+  ```sh
+  git push origin main
+  ```
+
+These steps outline the process of forking and cloning an existing project, as well as pulling modifications from the upstream repository to keep your fork up to date.
