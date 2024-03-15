@@ -146,7 +146,7 @@ After cloning the forked repository, you'll want to keep it synchronized with th
   ```sh
   cd project_name
   ```
-- **Add** the original repository as a remote (often called "upstream"):
+- Add the original repository as a remote (often called "upstream"):
   ```sh
   git remote add upstream https://github.com/original_owner/project_name.git
   ```
@@ -154,19 +154,19 @@ After cloning the forked repository, you'll want to keep it synchronized with th
 
 # 4. Pull Modifications from the Upstream Repository
 To update your fork with changes from the original project:
-- **Fetch** the latest changes from the upstream repository:
+- Fetch the latest changes from the upstream repository:
   ```sh
   git fetch upstream
   ```
-- **Switch** to your local `main` branch (or `master` if the project uses `master` as the default branch):
+- Switch to your local `main` branch (or `master` if the project uses `master` as the default branch):
   ```sh
   git checkout main
   ```
-- **Merge** the changes from the upstream's default branch (usually `main` or `master`) into your local default branch:
+- Merge the changes from the upstream's default branch (usually `main` or `master`) into your local default branch:
   ```sh
   git merge upstream/main
   ```
-- **Push** the updates to your fork on GitHub (optional, if you want your GitHub fork to reflect the latest changes):
+- Push the updates to your fork on GitHub (optional, if you want your GitHub fork to reflect the latest changes):
   ```sh
   git push origin main
   ```
